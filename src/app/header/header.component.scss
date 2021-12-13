@@ -1,0 +1,42 @@
+@import "../../styles.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.header__name {
+  padding-left: 5px;
+}
+
+.header__pipe {
+  color: $color-wookie;
+}
+
+.header__box {
+  text-align: center;
+
+  &-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  & p,
+  span {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  & p {
+    font-weight: bold;
+  }
+
+  & span {
+    cursor: pointer;
+  }
+}

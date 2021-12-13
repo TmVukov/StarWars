@@ -1,0 +1,46 @@
+@import "../../styles.scss";
+
+.human input {
+  border: 1px solid $color-human;
+}
+
+.human input::placeholder {
+  color: $color-human;
+}
+
+.human button {
+  border: 1px solid $color-human;
+  background: $color-human;
+  color: white;
+}
+
+.human button:hover:enabled {
+  background: darken($color: $color-human, $amount: 10);
+}
+
+.droid input {
+  border: 1px solid $color-droid;
+}
+
+.droid input::placeholder {
+  color: $color-droid;
+}
+
+.droid button {
+  border: 1px solid $color-droid;
+  background: $color-droid;
+  color: white;
+}
+
+.droid button:hover:enabled {
+  background: darken($color: $color-droid, $amount: 10);
+}
+
+.human button:disabled,
+.droid button:disabled {
+  background: lightgray;
+  color: gray;
+  border: 1px solid darkgray;
+}
+
+

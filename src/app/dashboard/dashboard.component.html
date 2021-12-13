@@ -1,0 +1,29 @@
+<main>
+  <div *ngIf="loading" class="loading">Species loading...</div>
+
+  <ng-container *ngIf="!loading">
+    <div class="cards">
+      <ng-container *ngFor="let specie of species">
+        <div
+          class="card__box"
+          [ngStyle]="{ background: getBackgroundColor(specie.name) }"
+          (click)="getRoute(specie.name)"
+        >
+          <div class="card__box-imageBox">
+            <img
+              [src]="'./assets/images/' + (specie.name | lowercase) + '.jpeg'"
+              [alt]="specie.name"
+              class="card__box-image"
+            />
+          </div>
+          <div class="card__box-info">
+            <h3>{{ specie.name }}</h3>
+            <p><span>classification:</span> {{ specie.classification }}</p>
+            <p><span>designation:</span> {{ specie.designation }}</p>
+            <p><span>language:</span> {{ specie.language }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</main>

@@ -1,0 +1,17 @@
+<div class="header" [ngStyle]="{ 'border-bottom': getBorderColor(type) }">
+  <div class="header__name" [ngStyle]="{ 'border-left': getBorderColor(type) }">
+    {{ type }}
+    <span *ngIf="title && type === 'Wookie'"
+      ><span class="header__pipe">|</span> {{ title }} <span class="header__pipe">|</span> films</span
+    >
+  </div>
+  <div class="header__box">
+    <img
+      [src]="'./assets/images/' + (type | lowercase) + '.jpeg'"
+      [alt]="type"
+      class="header__box-image"
+    />
+    <p>{{ name }}</p>
+    <span (click)="logout()">logout</span>
+  </div>
+</div>

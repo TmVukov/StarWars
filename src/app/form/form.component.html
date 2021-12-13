@@ -1,0 +1,32 @@
+<form
+  [formGroup]="vehicleForm"
+  (ngSubmit)="handleSubmit()"
+  [ngClass]="type === 'Human' ? 'human' : 'droid'"
+>
+  <label for="name">Name</label>
+  <input type="text" id="name" formControlName="name" placeholder="name" />
+  <label for="model">Model</label>
+  <input type="text" id="model" formControlName="model" placeholder="model" />
+  <label for="manufacturer">Manufacturer</label>
+  <input
+    type="text"
+    id="manufacturer"
+    formControlName="manufacturer"
+    placeholder="manufacturer"
+  />
+  <label for="cost">Cost in credits</label>
+  <input
+    type="text"
+    id="cost"
+    formControlName="cost_in_credits"
+    placeholder="cost"
+  />
+  <label for="created">Created</label>
+  <input
+    type="date"
+    id="created"
+    formControlName="created"
+    placeholder="vehicle created"
+  />
+  <button type="submit" [disabled]="vehicleForm.invalid">Save</button>
+</form>

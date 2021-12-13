@@ -1,0 +1,22 @@
+<div *ngIf="loading" class="loading">No movies to display.</div>
+
+<ng-container *ngIf="!loading">
+  <div class="cards">
+    <ng-container *ngFor="let movie of movies">
+      <div class="card__box">
+        <div class="card__box-imageBox">
+          <img
+              [src]="'./assets/images/' + (movie.title | movieTitle) + '.jpeg'"
+              [alt]="movie.title"
+              class="card__box-image"
+            />
+        </div>
+        <div class="card__box-info">
+          <h5>title: {{ movie.title }}</h5>
+          <p><span>episode:</span> {{ movie.episode_id }}</p>
+          <p><span>release date:</span> {{ movie.release_date | date: "dd/MM/yyyy" }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>

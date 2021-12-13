@@ -1,0 +1,19 @@
+.cards {
+  width: 100%;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
+
+.card__box {
+  width: 25%;
+
+  &-imageBox {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.loading {
+  margin-top: 20px;
+}
+

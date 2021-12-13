@@ -1,0 +1,48 @@
+@import "../../styles.scss";
+
+.human th,
+.human tr,
+.human td {
+  border: 1px solid $color-human;
+}
+
+.human tr:nth-child(even) {
+  background-color: $color-human;
+}
+
+.droid th,
+.droid tr,
+.droid td {
+  border: 1px solid $color-droid;
+}
+
+.droid tr:nth-child(even) {
+  background-color: $color-droid;
+}
+
+.wookie th,
+.wookie tr,
+.wookie td {
+  border: 1px solid $color-wookie;
+}
+
+.wookie tr:nth-child(even) {
+  background-color: $color-wookie;
+}
+
+.delete__btn {
+  text-align: center;
+  cursor: pointer;
+}
+
+.delete__btn:hover {
+  color: crimson;
+}
+
+.movie__link {
+  cursor: pointer;
+}
+
+.movie__link:hover{
+  text-decoration: underline;
+}
