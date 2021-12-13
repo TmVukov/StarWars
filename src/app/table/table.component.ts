@@ -82,6 +82,7 @@ export class TableComponent implements OnInit {
     this.swService.getStarships().subscribe(
       (resp) => {
         this.starships = resp.results;
+        this.swService.starships.next(this.starships);
 
         this.loading = false;
       },
